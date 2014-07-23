@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'bootstrap-sass', '~>3.1.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -42,5 +42,5 @@ end
 
 group :development do
 gem 'sqlite3'
-
+gem 'jazz_hands'
 end
