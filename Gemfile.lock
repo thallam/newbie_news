@@ -28,12 +28,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-<<<<<<< HEAD
     awesome_print (1.2.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-=======
->>>>>>> post-comment-model
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.2.2)
