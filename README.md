@@ -1,3 +1,3 @@
-##Blaccit - a black reddit clone
+##Newbie.news - a hacker news style app for newbs
 By Tom Hallam
-A instance of this app is hosted at blaccit.heroku.com
+
