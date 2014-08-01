@@ -43,4 +43,5 @@ end
 group :development do
 gem 'sqlite3'
 gem 'jazz_hands'
+gem 'faker'
 end
