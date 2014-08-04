@@ -46,9 +46,13 @@ body: Faker::Lorem.paragraph
   )
 end
 
-User.first.update_attributes(
+tom = User.first
+tom.update_attributes(
+  name:   'Tom'
   email: 'thllm01@gmail.com',
   password: 'newbienews')
+tom.skip_confirmation!
+tom.save
 
 puts "Seeding Complete"
 puts "#{User.count} users created "
