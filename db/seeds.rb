@@ -19,25 +19,46 @@ puts "Seeding data"
 
 5.times do
   user = User.new(
-    name:   Faker::Name.name,
-    email:  Faker::Internet.email,
+    name:       Faker::Name.name,
+    email:      Faker::Internet.email,
     password:   Faker::Lorem.characters(10)
     )
   user.skip_confirmation!
   user.save
   end
+
 users = User.all
 
-# Create Posts
+#create Topics
+15.times do
+Topic.create(
+  name: Faker::Lorem.sentence,
+  description: Faker::Lorem.paragraph
+  )
+  end
+topics = Topic.all
 
-50.times do
+
+
+
+
+# Create Posts
+puts "Creating Posts"
+seed_posts = IO.readlines("/Users/tom/projects/ruby/bloc/newbienews/newbienews/tmp/misc/post_seed.txt")
+
+
+seed_posts.each do |post|
+
   Post.create(
 user:   users.sample,
-title:  Faker::Company.catch_phrase,
+topic: topics.sample,
+title:  post,
 body:   Faker::Lorem.paragraph
     )
   end
-  posts = Post.all
+
+posts = Post.all
+puts "Posts completed"
 
 100.times do
 Comment.create(
@@ -46,14 +67,37 @@ body: Faker::Lorem.paragraph
   )
 end
 
-tom = User.first
-tom.update_attributes(
-  name:   'Tom'
-  email: 'thllm01@gmail.com',
-  password: 'newbienews')
-tom.skip_confirmation!
-tom.save
 
+puts "Creating Special Users"
+admin = User.new(
+name:   'Admin User',
+email:  'admin@example.com',
+password: 'helloworld',
+role:     'admin'
+  )
+
+admin.skip_confirmation!
+admin.save
+
+moderator = User.new(
+name:   'moderator User',
+email:  'moderator@example.com',
+password: 'helloworld',
+role:     'moderator'
+  )
+
+moderator.skip_confirmation!
+moderator.save
+
+member = User.new(
+name:   'Member User',
+email:  'member@example.com',
+password: 'helloworld',
+role:     'member'
+  )
+
+member.skip_confirmation!
+member.save
 puts "Seeding Complete"
 puts "#{User.count} users created "
 puts "#{Post.count} posts created"
