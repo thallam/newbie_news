@@ -6,4 +6,8 @@ end
 def update?
 user.present? &&  user.role?(:admin)
 end
+
+def create?
+update?
+end
 end
