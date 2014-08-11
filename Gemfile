@@ -47,4 +47,7 @@ group :development do
 gem 'sqlite3'
 gem 'jazz_hands'
 gem 'faker'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'meta_request'
 end
