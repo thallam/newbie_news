@@ -5,8 +5,8 @@ end
 
 
 def create?
-user.present? && user.role?(:admin)
-  end
+user.present? && user.role?(:admin || :user)
+end
 
   def update?
 create?

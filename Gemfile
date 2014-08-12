@@ -4,6 +4,7 @@ gem 'devise'
 gem 'figaro'
 gem 'pundit'
 gem 'will_paginate'
+gem 'redcarpet'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
