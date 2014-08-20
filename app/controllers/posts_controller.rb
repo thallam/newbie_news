@@ -43,6 +43,21 @@ class PostsController < ApplicationController
       flash[:error] = "There was an error saving the post."
       render :edit
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @topic = Topic.find(params[:topic_id])
+
+    authorize @post
+    if @post.destroy
+      flash[:notice] = "The post was destroyed"
+      redirect_to @topic
+    else
+      flash[:error] = "There was an error destroying the post"
+      redirect_to [@topic, @post]
+    end
+
 
   end
 end
