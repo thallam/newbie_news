@@ -41,6 +41,16 @@ class TopicsController < ApplicationController
       flash[:error] = "There was an error saving the topic."
       render :edit
     end
+  end
 
+  def destroy
+      @topic = Topic.find(params[:id])
+      authorize @topic
+      if @topic.destroy
+        flash[:notice] = "Topic was destroyed."
+        redirect_to topics_path
+      else
+        flash[:error] = "There was an error destroying the Topic"
+      end
   end
 end
