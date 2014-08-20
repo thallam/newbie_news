@@ -10,4 +10,8 @@
     </div>
   </div>
 
+  <% if policy(c).destroy? %>
+    <%= link_to "Delete", [@topic, @post, c], method: :delete %>
+  <% end %>
+
 <% end %>

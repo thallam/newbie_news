@@ -29,8 +29,21 @@ end
 def update
 end
 
-def destroy
-end
+  def destroy
+    @post = Post.find(params[:post_id])
+    @topic = Topic.find(params[:topic_id])
+    @comment = @post.comments.find(params[:id])
+
+    authorize @comment
+
+    if @comment.destroy
+      flash[:notice] = "The comment was destroyed"
+      redirect_to topic_post_path(id: @post.id)
+    else
+      flash[:error] = "There was an error destroying the comment"
+      redirect_to topic_post_path(id: @post.id)
+    end
+  end
 
 
   protected
