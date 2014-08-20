@@ -1,0 +1,13 @@
+
+<% @comments.each do |c| %>
+  <div id="media">
+    <div id="media-body">
+      <%= c.body %>
+      <br>
+      <small>
+        submitted <%= time_ago_in_words(c.created_at) %> ago by <%= c.user.name %>
+      </small>
+    </div>
+  </div>
+
+<% end %>

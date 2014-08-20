@@ -60,12 +60,7 @@ body:   Faker::Lorem.paragraph
 posts = Post.all
 puts "Posts completed"
 
-100.times do
-Comment.create(
-post: posts.sample,
-body: Faker::Lorem.paragraph
-  )
-end
+
 
 
 puts "Creating Special Users"
@@ -98,6 +93,14 @@ role:     'member'
 
 member.skip_confirmation!
 member.save
+
+100.times do
+Comment.create(
+post: posts.sample,
+user: users.sample,
+body: Faker::Lorem.paragraph
+  )
+end
 puts "Seeding Complete"
 puts "#{User.count} users created "
 puts "#{Post.count} posts created"
