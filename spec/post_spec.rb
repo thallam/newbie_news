@@ -1,16 +1,19 @@
 require 'rails_helper'
 
-describe Post do
-  describe "vote methods" do
 
+describe Post do
+  # include Factories
+  describe "vote methods" do
     before do
-      @post = Post.create(title: 'post title', body: 'post body must be a bit long', topic: Topic.last, user: User.last)
-      3.times { @post.votes.create(value: 1)}
-      2.times { @post.votes.create(value: -1)}
+    @post = sample_post
+
+      3.times { @post.votes.create!(value: 1)}
+      2.times { @post.votes.create!(value: -1)}
     end
 
+
     describe '#up_votes' do
-      it "counts the number of votes with value = 1" do
+      it "counts the number of voteexs with value = 1" do
         expect( @post.up_votes).to eq(3)
       end
     end
