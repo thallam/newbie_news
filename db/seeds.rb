@@ -25,17 +25,17 @@ puts "Seeding data"
     )
   user.skip_confirmation!
   user.save
-  end
+end
 
 users = User.all
 
 #create Topics
-15.times do
-Topic.create(
-  name: Faker::Lorem.sentence,
-  description: Faker::Lorem.paragraph
-  )
-  end
+5.times do
+  Topic.create(
+    name: Faker::Lorem.sentence,
+    description: Faker::Lorem.paragraph
+    )
+end
 topics = Topic.all
 
 
@@ -48,14 +48,17 @@ seed_posts = IO.readlines("/Users/tom/projects/ruby/bloc/newbienews/newbienews/t
 
 
 seed_posts.each do |post|
-
-  Post.create(
-user:   users.sample,
-topic: topics.sample,
-title:  post,
-body:   Faker::Lorem.paragraph
+  x = Post.create(
+    user:   users.sample,
+    topic: topics.sample,
+    title:  post,
+    body:   Faker::Lorem.paragraph
     )
-  end
+
+x.update_attribute(:created_at, rand(10.minutes .. 1.week).ago)
+x.update_rank
+
+end
 
 posts = Post.all
 puts "Posts completed"
@@ -65,41 +68,41 @@ puts "Posts completed"
 
 puts "Creating Special Users"
 admin = User.new(
-name:   'Admin User',
-email:  'admin@example.com',
-password: 'helloworld',
-role:     'admin'
+  name:   'Admin User',
+  email:  'admin@example.com',
+  password: 'helloworld',
+  role:     'admin'
   )
 
 admin.skip_confirmation!
 admin.save
 
 moderator = User.new(
-name:   'moderator User',
-email:  'moderator@example.com',
-password: 'helloworld',
-role:     'moderator'
+  name:   'moderator User',
+  email:  'moderator@example.com',
+  password: 'helloworld',
+  role:     'moderator'
   )
 
 moderator.skip_confirmation!
 moderator.save
 
 member = User.new(
-name:   'Member User',
-email:  'member@example.com',
-password: 'helloworld',
-role:     'member'
+  name:   'Member User',
+  email:  'member@example.com',
+  password: 'helloworld',
+  role:     'member'
   )
 
 member.skip_confirmation!
 member.save
 
 100.times do
-Comment.create(
-post: posts.sample,
-user: users.sample,
-body: Faker::Lorem.paragraph
-  )
+  Comment.create(
+    post: posts.sample,
+    user: users.sample,
+    body: Faker::Lorem.paragraph
+    )
 end
 puts "Seeding Complete"
 puts "#{User.count} users created "

@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :topic
 
-  default_scope { order('created_at DESC') }
+  default_scope { order('rank DESC') }
   scope :order_by_title, -> {order('title: DESC')}
   scope :order_by_earliest, -> {order('created_at ASC')}
 
@@ -22,4 +22,11 @@ class Post < ActiveRecord::Base
   def points
     votes.sum(:value)
   end
+
+  def update_rank
+  age = (created_at - Time.new(1970,1,1)) / (60*60*24)  # 1 day in seconds
+  new_rank = points + age
+  update_attribute(:rank, new_rank)
+  end
+
 end
