@@ -7,6 +7,11 @@ validates :value, inclusion: { in: [-1, 1], message: "%{value} is not a valid vo
 
 after_save :update_post
 
+
+def new_vote
+
+end
+
 private
 
 def update_post
