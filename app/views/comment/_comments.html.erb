@@ -1,17 +1,19 @@
 
 <% @comments.each do |c| %>
-  <div id="media">
-    <div id="media-body">
-      <%= c.body %>
-      <br>
-      <small>
-        submitted <%= time_ago_in_words(c.created_at) %> ago by <%= c.user.name %>
-      </small>
-    </div>
+<%= content_tag :div, class: 'media', id: "comment-#{comment.id}" do %>
+<div id="media">
+  <div id="media-body">
+    <%= c.body %>
+    <br>
+    <small>
+      submitted <%= time_ago_in_words(c.created_at) %> ago by <%= c.user.name %>
+    </small>
   </div>
+</div>
 
-  <% if policy(c).destroy? %>
-    <%= link_to "Delete", [ @post, c], method: :delete %>
-  <% end %>
+<% if policy(c).destroy? %>
+<%= link_to "Delete", [ @post, c], method: :delete %>
+<% end %>
 
+<% end %>
 <% end %>
