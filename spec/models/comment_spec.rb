@@ -12,7 +12,7 @@ describe Comment do
     it "sends an email to users who have favorited the post" do
       @user.favorites.where(post: @post).create
 
-      allow (FavoriteMailer)
+      allow ( FavoriteMailer )
       .to receive(:new_comment)
       .with(@user, @post, @comment)
       .and_return( double(deliver: true))
@@ -21,12 +21,12 @@ describe Comment do
 
     end
 
-  it "does not send emails to users who haven't" do
-    expect(FavoriteMailer).to
-    .not_to receive(:new_comment)
+    it "does not send emails to users who haven't" do
+      expect(FavoriteMailer).to
+      .not_to receive(:new_comment)
 
-    @comment.save
-  end
+      @comment.save
+    end
   end
 
 end

@@ -1,6 +1,6 @@
 
 <% @comments.each do |c| %>
-<%= content_tag :div, class: 'media', id: "comment-#{comment.id}" do %>
+<%= content_tag :div, class: 'media', id: "comment-#{c.id}" do %>
 <div id="media">
   <div id="media-body">
     <%= c.body %>
