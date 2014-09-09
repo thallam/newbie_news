@@ -1,5 +1,6 @@
-##Newbie.news - a hacker news style app for newbs
-By Tom
+##Newbie.news - a hacker news style app -for newbs.
 
-More changes from tom
+
+
+
 

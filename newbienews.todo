@@ -1,9 +1,12 @@
 Questions for my Mentor:
   ☐ How do I ensure that my test database is cleared of data each time I test? Should I only have the data specified in my factories?
-  ☐ My tests for auto email for the commernt model in rspec are failing because it doesn't recognize the "to" method
+  ☐ My tests for auto email for the commernt model in rspec are failing even though the feature works because it doesn't recognize the "to" method
+  ☐   autocomplete for git
 
 
 
- Things to do on Newbie News:
+ Things to do on Newbie News @today:
    ✔ Set up tests for voting functionality @started(14-08-31 18:27) @done (14-09-09 14:04) @lasted(8 days, 19:37)
- ☐ Make topics private unless signed in
+ ✔ Make topics private unless signed in @started(14-09-09 14:12) @done (14-09-09 15:25) @lasted(1:13)
+
+
