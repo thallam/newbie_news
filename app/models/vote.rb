@@ -12,9 +12,21 @@ def new_vote
 
 end
 
+def up_vote?
+  value == 1
+end
+
+def down_vote?
+  value == -1
+end
+
+
 private
 
 def update_post
   post.update_rank
 end
+
+
+
 end

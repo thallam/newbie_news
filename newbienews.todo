@@ -8,5 +8,12 @@ Questions for my Mentor:
  Things to do on Newbie News @today:
    ✔ Set up tests for voting functionality @started(14-08-31 18:27) @done (14-09-09 14:04) @lasted(8 days, 19:37)
  ✔ Make topics private unless signed in @started(14-09-09 14:12) @done (14-09-09 15:25) @lasted(1:13)
+   ☐ fix the following using TDD\BDD
+       ✔ Redirect after sign-in to topics page @started(14-09-09 17:56) @done (14-09-09 18:07) @lasted(0:11)
+       ✔ Change voting icons to show user has voted @done (14-09-09 18:55)
+       ☐ Only email users if their email preferences allow this
+ ☐ Set up user profiles
+
+
 
 
