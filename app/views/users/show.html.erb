@@ -1,0 +1,14 @@
+This is the users show page.
+<h1><%= @user.name %></h1>
+
+<h2>Posts</h2>
+
+<% @posts.each do |post| %>
+ <p> <%= post.title %></p>
+<% end %>
+
+<h2>Comments</h2>
+
+<% @comments.each do |comment| %>
+  <p><%= comment.body %></p>
+<% end %>

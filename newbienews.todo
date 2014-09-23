@@ -14,6 +14,9 @@ Questions for my Mentor:
        ☐ Only email users if their email preferences allow this @started
            - Unable to get test working it is passing when it should fail...
  ☐ Set up user profiles
+     ☐ ? Why aren't my profiles working?
+         The feature works - however the tests won't pass......
+
 
 
 
