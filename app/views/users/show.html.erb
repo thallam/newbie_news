@@ -1,14 +1,29 @@
-This is the users show page.
-<h1><%= @user.name %></h1>
 
 <h2>Posts</h2>
 
-<% @posts.each do |post| %>
- <p> <%= post.title %></p>
-<% end %>
+<%= render @posts %>
 
 <h2>Comments</h2>
 
 <% @comments.each do |comment| %>
-  <p><%= comment.body %></p>
+<p><%= comment.body %></p>
 <% end %>
+
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="media">
+
+      <div class="media-body">
+        <div class="media-heading">
+          <h2><%= @user.name %></h2>
+          <small>
+            <%= pluralize(@user.posts.count, 'post') %>
+            <%= pluralize(@user.comments.count, 'comment') %>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>

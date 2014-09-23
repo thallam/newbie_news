@@ -3,8 +3,9 @@ require 'rails_helper'
 describe "Visiting profiles" do
   before do
     @user = sample_user
-    @post = post_without_user(user: @user)
-    @comment = Comment.create(user: @user, body: "A Comment")
+    @topic = sample_topic
+    @post = post_without_user(user: @user, topic: @topic)
+    @comment = Comment.create(user: @user, post: @post, body: "A Comment")
     allow(@comment).to receive(:sent_favorite_emails)
     @comment.save
   end
@@ -17,8 +18,8 @@ describe "Visiting profiles" do
 
 
       expect(page).to  have_content(@user.name)
-      expect(page).to  have_content(@comment.body)
       expect(page).to  have_content(@post.title)
+      expect(page).to  have_content(@comment.body)
     end
 
   end
