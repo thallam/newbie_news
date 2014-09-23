@@ -11,7 +11,8 @@ Questions for my Mentor:
    ☐ fix the following using TDD\BDD
        ✔ Redirect after sign-in to topics page @started(14-09-09 17:56) @done (14-09-09 18:07) @lasted(0:11)
        ✔ Change voting icons to show user has voted @done (14-09-09 18:55)
-       ☐ Only email users if their email preferences allow this
+       ☐ Only email users if their email preferences allow this @started
+           - Unable to get test working it is passing when it should fail...
  ☐ Set up user profiles
 
 
