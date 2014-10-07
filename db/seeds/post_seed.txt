@@ -1,0 +1,29 @@
+How a daily visit to the Apple Store makes me a better person
+How Redis+Memcached+Node.js+Go+MongoDB+MariaDB+postgres+Clojure helped my start-up scale (from 10 to 20 hits per day)
+Why everything you know is wrong... again.
+How I find vegan food in new york
+How I stopped [perfectly fine activity]... And why you should, too.
+Ask NN: Why is nobody using [obscure niche technology from the 80s]?
+Why if your post on NN drops off first page, you should delete it and post again with a different title
+Why you shouldn't store your files locally, but in the cloud
+Ten reasons to be really scared
+Lastest news: Hackers can now hack your loo!
+Very popular opinion written condescendingly on my blog
+Disrupt disruption
+Why I quit my job to found a start up in SF
+There is no bubble, this time is different.
+Why it's impossible to use PHP even though millions of people are doing great things with it
+Show NN: My bootstrapped Twitter-clone
+Show NN: Twitter with Reddit voting system
+Why [popular language] is not my favourite programming language
+True minimalism: Why you really don't need anything besides an iPad and Macbook
+[Service nobody has ever heard of] is closing down.
+[Service nobody has ever heard of] acquired by Yahoo.
+Why nothing exists outside of SV
+Things Millennials Don't Understand About The Real World
+Deep {C | Ruby | Python | Go} (slideshare.net)
+Why Elon Musk is going to save humanity from extinction and dissolve poverty.
+How a 4chan parody thread inspired me to quit my job and start my own company
+Ask NN: what's everyone cooking for dinner?
+Show NN: Go ported to lisp.js
+How i made [number] of [things] in [period of time] and blogged about it afterwords

@@ -29,7 +29,7 @@ topics = Topic.all
 
 # Create Posts
 puts "Creating Posts"
-seed_posts = IO.readlines("tmp/misc/post_seed.txt")
+seed_posts = IO.readlines("db/seeds/post_seed.txt")
 
 
 seed_posts.each do |post|
