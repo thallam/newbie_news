@@ -1,29 +1,17 @@
-
-<h2>Posts</h2>
-
-<%= render @posts %>
-
-<h2>Comments</h2>
-
-<% @comments.each do |comment| %>
-<p><%= comment.body %></p>
-<% end %>
-
-
+<h2><%= @user.name %></h2>
 <div class="row">
-  <div class="col-md-8">
-    <div class="media">
-
-      <div class="media-body">
-        <div class="media-heading">
-          <h2><%= @user.name %></h2>
-          <small>
-            <%= pluralize(@user.posts.count, 'post') %>
-            <%= pluralize(@user.comments.count, 'comment') %>
-          </small>
-        </div>
+  <div class="tabbable tabs-left">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#posts" data-toggle="tab">Posts</a></li>
+      <li><a href="#comments" data-toggle="tab">Comments</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="posts">
+        <%= render @posts %>
+      </div>
+      <div class="tab-pane" id="comments">
+        <%= render @user.comments %>
       </div>
     </div>
   </div>
 </div>
-<br>

@@ -6,11 +6,11 @@
 
     <p><%= markdown @post.body %></p>
     <h4>Comments:</h4>
-  <%=  render partial: 'comment/comments'  %>
+  <%=  render partial: 'comments/comment'  %>
 
   <% if policy(Comment.new).create? %>
     <h4>Add a new comment:</h4>
-    <%= render partial: 'comment/form' %>
+    <%= render partial: 'comments/form' %>
   <% end %>
   </div>
 
