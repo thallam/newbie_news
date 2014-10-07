@@ -6,6 +6,7 @@ gem 'pundit'
 gem 'will_paginate'
 gem 'redcarpet'
 gem 'capybara'
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -53,7 +54,7 @@ end
 group :development do
 gem 'sqlite3'
 gem 'jazz_hands'
-gem 'faker'
+
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'meta_request'
