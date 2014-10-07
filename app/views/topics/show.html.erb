@@ -8,7 +8,7 @@
   <div class="col-md-6">
     <p class="lead"><%= @topic.description %></p>
     <% @posts.each do |post| %>
-      <%= render @posts %>
+      <%= render partial: 'topics/posts/post', collection: @posts %>
     <% end %>
   </div>
   <div class="col-md-4">
