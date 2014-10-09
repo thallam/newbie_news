@@ -2,6 +2,7 @@ Questions for my Mentor:
   ☐ How do I ensure that my test database is cleared of data each time I test? Should I only have the data specified in my factories?
   ☐ My tests for auto email for the commernt model in rspec are failing even though the feature works because it doesn't recognize the "to" method
   ☐   autocomplete for git
+    ☐ ! adding comments automatically adds them factorially. it is looping through all the comments.
 
 
 
@@ -13,7 +14,7 @@ Questions for my Mentor:
        ✔ Change voting icons to show user has voted @done (14-09-09 18:55)
        ☐ Only email users if their email preferences allow this @started
            - Unable to get test working it is passing when it should fail...
- ☐ Set up user profiles
+ ✔ Set up user profiles @done (14-10-07 21:33)
      ✔ ? Why aren't my profiles working? @started(14-09-23 16:53)   @done (14-09-23 16:53) @lasted(0:00) (there was no post associated with the comment.)
 
 

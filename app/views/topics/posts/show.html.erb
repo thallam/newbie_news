@@ -5,6 +5,7 @@
   <h2><%= markdown @post.title %></h2>
 
     <p><%= markdown @post.body %></p>
+    <%# binding.pry %>
     <h4>Comments:</h4>
   <%=  render partial: 'comments/comment', collection: @comments %>
 

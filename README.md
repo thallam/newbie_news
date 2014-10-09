@@ -1,4 +1,7 @@
-##Newbie.news - a hacker news style app -for newbs.
+##Newbie.news - a reddit/hacker-news style app - for newbies.
+
+
+
 
 
 
