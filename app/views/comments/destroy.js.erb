@@ -2,7 +2,10 @@
 <% if @comment.destroyed? %>
 $('#comment-' +<%= @comment.id %>).hide();
 $('.js-comments-count').html('<%= @comment.user.comments.count %> comments');
-<% else %>
-$('#comment-' +<%= @comment.id %>).prepend("<div class='alert alert-error'><%= flash[:error] %></div>
-  ");
+<% end %>
+
+<% if not flash[:error].blank? %>
+  alert("<%= flash[:error] %>");
+  $('#comment-' +<%= @comment.id %>).show();
+  $('.js-comments-count').html('<%= @comment.user.comments.count %> comments');
 <% end %>

@@ -33,6 +33,7 @@ class CommentsController < ApplicationController
 
     authorize @comment
 
+
     if @comment.destroy
       flash[:notice] = "The comment was destroyed"
 
