@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+<<<<<<< HEAD
 respond_to :html, :js
   def show
   end
@@ -36,20 +37,21 @@ respond_to :html, :js
 
     authorize @comment
 
+
     if @comment.destroy
       flash[:notice] = "The comment was destroyed"
-      redirect_to topic_post_path(@post.topic_id, @post )
+
     else
       flash[:error] = "There was an error destroying the comment"
-      redirect_to topic_post_path(@post.topic_id, @post )
-    end
-  end
 
+    end
+
+    respond_with(@comment) do |format|
+      format.html { redirect_to [@post.topic, @post] }
+    end
+    end
 
   private
   def comment_params
     params.require(:comment).permit(:body)
   end
-
-
-end

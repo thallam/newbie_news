@@ -28,7 +28,7 @@ module Factories
 
     post = Post.new(post_options)
     allow(post).to receive(:create_vote)
-    post.save
+    post.save!
     post
 
 
