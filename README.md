@@ -1,9 +1,7 @@
-##Newbie.news - a reddit/hacker-news style app - for newbies.
+##Newbie_news - a reddit style app
 
+A hacker news spoof example is available at http://newbienews.herokuapp.com/
+You can sign up or use the following usernames
 
-
-
-
-
-
-
+Email: [admin || moderator || member]@example.com
+Password: helloworld
