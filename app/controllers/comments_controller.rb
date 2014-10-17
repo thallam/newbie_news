@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
-<<<<<<< HEAD
+
 respond_to :html, :js
+
   def show
   end
 
@@ -49,9 +50,10 @@ respond_to :html, :js
     respond_with(@comment) do |format|
       format.html { redirect_to [@post.topic, @post] }
     end
-    end
+  end
 
   private
   def comment_params
     params.require(:comment).permit(:body)
   end
+end
